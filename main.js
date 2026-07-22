@@ -83,7 +83,7 @@ if (ey<0){
       score+=1
       scoreElement.textContent = score;
     }else{
-        alert("Your final score is "+score+". Refresh and then press Ok to play again.")
+        alert("Your final score is "+score+". Refresh to play again.")
         
         isGameOver=True
 
