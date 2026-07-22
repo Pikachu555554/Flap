@@ -82,6 +82,7 @@ if (ey<0){
       scoreElement.textContent = score;
     }else{
         alert("Your final score is "+score+". Refresh to play again.")
+        
     }
       ctx.fillStyle = "gold";
       ctx.fillRect(x, y, 40, 40);
@@ -89,4 +90,8 @@ if (ey<0){
       ctx.fillRect(ex, ey, 40, 40)
       requestAnimationFrame(gameLoop);
 }
+    if (distance>=4){
     gameLoop();
+    }else{
+        alert("Your final score is "+score+". Refresh to play again.")
+    }
