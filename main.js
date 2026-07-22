@@ -17,7 +17,7 @@ let eyrate=8
 let dx=x-ex
 let dy=y-ey
 let distance=Math.hypot(dx, dy)
-let isGameOver=False
+let isGameOver=false
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
