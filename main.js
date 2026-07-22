@@ -17,6 +17,7 @@ let eyrate=8
 let dx=x-ex
 let dy=y-ey
 let distance=Math.hypot(dx, dy)
+let isGameOver=False
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -49,6 +50,7 @@ resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
 function gameLoop(){
+if (isGameOver) return;
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 ctx.fillStyle="white"
 ctx.fillRect(0,0,canvas.width,2);
@@ -81,6 +83,7 @@ if (ey<0){
       score+=1
       scoreElement.textContent = score;
     }else{
+        isGameOver=True
         alert("Your final score is "+score+". Refresh to play again.")
         
     }
@@ -90,8 +93,4 @@ if (ey<0){
       ctx.fillRect(ex, ey, 40, 40)
       requestAnimationFrame(gameLoop);
 }
-    if (distance>=4){
     gameLoop();
-    }else{
-        alert("Your final score is "+score+". Refresh to play again.")
-    }
